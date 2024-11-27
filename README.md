@@ -1,54 +1,218 @@
-Text Editor Project
+Text Editor (C++ & SFML)
 Overview
-This project is a text editor built using C++ and SFML (Simple and Fast Multimedia Library). The text editor allows users to type and edit text, with support for multi-line input, cursor navigation, and basic undo functionality. The editor is designed to be simple, lightweight, and responsive.
-Key Features:
-    • Multi-line text editor: Manage and edit text across multiple lines.
-    • Cursor movement: Navigate the text with left and right cursor movement.
-    • Undo functionality: Revert changes made during the current editing session.
-    • File operations: Save and read text files for persistence.
-    • Custom Font Rendering: Render text using a custom font (Roboto-Light.ttf).
+
+This project is a simple text editor built using C++ and SFML (Simple and Fast Multimedia Library). It allows users to type and edit text in a multi-line environment with support for basic features like cursor movement, undo functionality, and file I/O. The editor uses SFML to handle window events and rendering, making it a lightweight and easy-to-use editor for basic text manipulation.
+Features
+
+    Multi-line text editing: Manage text across multiple lines, with a dynamic list of lines represented using a linked list.
+    Cursor navigation: Move the cursor left or right within the current line.
+    Undo functionality: Revert the last change made (addition, deletion, or moving to the next line).
+    File operations: Save the text to a file and load text from an existing file.
+    Custom font rendering: Render text on the screen using the Roboto-Light font.
 
 Requirements
-To build and run this project, the following software must be installed:
-    • C++ Compiler: A C++ compiler like GCC, Clang, or MSVC is required.
-    • SFML Library: The project uses SFML for graphical rendering and window handling.
-        ◦ You can download SFML from here.
-    • Font File: This project uses Roboto-Light.ttf for text rendering. Make sure to place the font file in the project directory or specify its path correctly.
+
+    SFML: The project uses the SFML library to handle graphical components, input, and window management.
+    C++ Compiler: You will need a C++ compiler like GCC, Clang, or MSVC.
+    Font File: The project uses Roboto-Light.ttf for text rendering.
 
 Installation
-    • Clone the repository:
-           git clone <your-repository-url>
-		cd <your-project-directory>
-    • Install SFML:
-      Windows: Download SFML from the SFML download page, then link it to your C++ project according to the provided instructions.
-    • Linux: Install SFML via the package manager. On Ubuntu, you can use:
-      sudo apt-get install libsfml-dev
-    • macOS: If using Homebrew, install SFML with:
-      brew install sfml
-    • Build the Project: Compile the project using your preferred C++ build system (e.g., Make, IDE, or directly through command line with g++).
-Usage:
-    • Running the Text Editor: After building the project, you can run the text editor executable:
-      ./text_editor
-Features:
-    • Text Rendering: Displays the text typed by the user, supporting multiple
-	lines.
-    • Cursor Movement: Allows the user to move the cursor left and right within the current line.
-    • Undo Operations: Supports undo functionality for the last added or deleted character.
-    • File Operations: Save and load text files for persistence.
-Controls:
-    • Left Arrow Key: Move the cursor left within the current line.
-    • Right Arrow Key: Move the cursor right within the current line.
-    • Text Typing: Simply type to add characters to the current line.
-    • Undo: The undo functionality can revert the last change made to the text (character add or delete).
-    • Save/Load: Save your work or load previously saved text files.
+1. Clone the Repository
+
+Clone the project to your local machine using the following command:
+git clone [https://github.com/khizerhaider/Simple-Text-editor-C-SFML.git](https://github.com/khizerhaider/Simple-Text-editor-C-SFML.git)
+cd TextEditor
+Install SFML
+
+Windows:
+
+    Download SFML from the official site and follow the setup instructions for your compiler.
+
+Linux (Ubuntu):
+	sudo apt-get install libsfml-dev
+macOS (Homebrew):
+	brew install sfml
+2. Build the Project
+
+You can compile and run the project manually or use a build tool like Make. Here's an example using g++ (for Linux or macOS):
+g++ -o TextEditor main.cpp TextEditor.cpp LineNode.cpp -lsfml-graphics -lsfml-window -lsfml-system
+./TextEditor
+Certainly! Here's a README tailored for your GitHub repository. It will include key sections like an overview, features, installation, usage, and contribution guidelines.
+Text Editor (C++ & SFML)
+Overview
+
+This project is a simple text editor built using C++ and SFML (Simple and Fast Multimedia Library). It allows users to type and edit text in a multi-line environment with support for basic features like cursor movement, undo functionality, and file I/O. The editor uses SFML to handle window events and rendering, making it a lightweight and easy-to-use editor for basic text manipulation.
+Features
+
+    Multi-line text editing: Manage text across multiple lines, with a dynamic list of lines represented using a linked list.
+    Cursor navigation: Move the cursor left or right within the current line.
+    Undo functionality: Revert the last change made (addition, deletion, or moving to the next line).
+    File operations: Save the text to a file and load text from an existing file.
+    Custom font rendering: Render text on the screen using the Roboto-Light font.
+
+Requirements
+
+    SFML: The project uses the SFML library to handle graphical components, input, and window management.
+    C++ Compiler: You will need a C++ compiler like GCC, Clang, or MSVC.
+    Font File: The project uses Roboto-Light.ttf for text rendering.
+
+Installation
+1. Clone the Repository
+
+Clone the project to your local machine using the following command:
+
+git clone https://github.com/yourusername/TextEditor.git
+cd TextEditor
+
+2. Install SFML
+
+Windows:
+
+    Download SFML from the official site and follow the setup instructions for your compiler.
+
+Linux (Ubuntu):
+
+sudo apt-get install libsfml-dev
+
+macOS (Homebrew):
+
+brew install sfml
+
+3. Build the Project
+
+You can compile and run the project manually or use a build tool like Make. Here's an example using g++ (for Linux or macOS):
+
+g++ -o TextEditor main.cpp TextEditor.cpp LineNode.cpp -lsfml-graphics -lsfml-window -lsfml-system
+./TextEditor
+
+Usage
+
+Once the project is compiled, you can run the text editor using the following command:
+./TextEditor
+Certainly! Here's a README tailored for your GitHub repository. It will include key sections like an overview, features, installation, usage, and contribution guidelines.
+Text Editor (C++ & SFML)
+Overview
+
+This project is a simple text editor built using C++ and SFML (Simple and Fast Multimedia Library). It allows users to type and edit text in a multi-line environment with support for basic features like cursor movement, undo functionality, and file I/O. The editor uses SFML to handle window events and rendering, making it a lightweight and easy-to-use editor for basic text manipulation.
+Features
+
+    Multi-line text editing: Manage text across multiple lines, with a dynamic list of lines represented using a linked list.
+    Cursor navigation: Move the cursor left or right within the current line.
+    Undo functionality: Revert the last change made (addition, deletion, or moving to the next line).
+    File operations: Save the text to a file and load text from an existing file.
+    Custom font rendering: Render text on the screen using the Roboto-Light font.
+
+Requirements
+
+    SFML: The project uses the SFML library to handle graphical components, input, and window management.
+    C++ Compiler: You will need a C++ compiler like GCC, Clang, or MSVC.
+    Font File: The project uses Roboto-Light.ttf for text rendering.
+
+Installation
+1. Clone the Repository
+
+Clone the project to your local machine using the following command:
+
+git clone https://github.com/yourusername/TextEditor.git
+cd TextEditor
+
+2. Install SFML
+
+Windows:
+
+    Download SFML from the official site and follow the setup instructions for your compiler.
+
+Linux (Ubuntu):
+
+sudo apt-get install libsfml-dev
+
+macOS (Homebrew):
+
+brew install sfml
+
+3. Build the Project
+
+You can compile and run the project manually or use a build tool like Make. Here's an example using g++ (for Linux or macOS):
+
+g++ -o TextEditor main.cpp TextEditor.cpp LineNode.cpp -lsfml-graphics -lsfml-window -lsfml-system
+./TextEditor
+
+Usage
+
+Once the project is compiled, you can run the text editor using the following command:
+
+./TextEditor
+
+Controls
+
+    Left Arrow Key: Move the cursor left within the current line.
+    Right Arrow Key: Move the cursor right within the current line.
+    Text Input: Type text into the editor, which will appear in the current line.
+    Undo: Reverts the last change made to the text (e.g., adding or removing characters).
+    Save: Saves the current text into a .txt file.
+    Load: Loads text from an existing .txt file.
+
 Project Structure
-The project is organized as follows:
-/TextEditorProject
-│   ├── TextEditor.cpp        # Main class for text editor logic
-│   ├── LineNode.cpp          # Definition of LineNode class (used to represent each line of text)
-│   ├── main.cpp              # Entry point for the application
+
+The project structure is as follows:
+
+/TextEditor
+│
+├── src/
+│   ├── TextEditor.cpp        # Contains the main logic for the TextEditor class
+│   ├── LineNode.cpp          # Defines the LineNode class (manages lines of text)
+│   ├── main.cpp              # The entry point of the application
+│
+├── include/
 │   ├── TextEditor.h          # Header for TextEditor class
 │   ├── LineNode.h            # Header for LineNode class
-│   └── Roboto-Light.ttf      # Font file used for text rendering
+│
+├── assets/
+│   └── Roboto-Light.ttf      # The font used for rendering text
 │
 ├── README.md                 # Project documentation (this file)
+└── Makefile                  # Makefile for building the project (optional)
+
+Main Classes
+
+    TextEditor: The core class for handling input, rendering, and undo functionality. It also includes file handling for saving and loading text.
+    LineNode: A linked list node that represents each line of text. It supports operations like adding and removing characters, resizing, and cursor movement.
+
+Code Breakdown
+TextEditor Class
+
+    handleInput(sf::Event& event): Processes key presses and mouse events.
+    update(): Updates the state of the editor, such as cursor visibility.
+    render(sf::RenderWindow& window): Renders the text and cursor on the window.
+    undo(): Reverts the last text modification.
+    saveToFile(): Saves the current text to a file.
+    loadFromFile(): Loads text from a file into the editor.
+
+LineNode Class
+
+    line: A dynamic array that stores the characters in a line of text.
+    cursorPos: The current cursor position within the line.
+    appendChar(char c): Appends a character to the line.
+    removeChar(): Removes a character from the line at the cursor position.
+    moveCursorLeft(): Moves the cursor left within the line.
+    moveCursorRight(): Moves the cursor right within the line.
+
+Future Enhancements
+
+    Text Formatting: Add support for bold, italics, underline, and other text styles.
+    Search and Replace: Implement functionality to search for text and replace it.
+    Advanced Undo/Redo: Improve the undo/redo system to handle more complex operations.
+
+Contributing
+
+If you'd like to contribute to the project, you can follow these steps:
+
+    Fork the repository.
+    Create a new branch (git checkout -b feature-branch).
+    Make your changes and commit them (git commit -am 'Add new feature').
+    Push to your branch (git push origin feature-branch).
+    Open a pull request with a description of your changes.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
