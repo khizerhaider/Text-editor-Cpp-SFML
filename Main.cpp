@@ -78,7 +78,6 @@ public:
     void render(sf::RenderWindow& window) {
         window.draw(popupBackground);
         window.draw(promptText);
-        window.draw(inputBox);
         window.draw(fileNameText);
         window.draw(okButton);
         window.draw(okButtonText);
@@ -143,14 +142,25 @@ int main() {
 
     // Create the file input popup
     FileInputPopup fileInputPopup(font);
-    fileInputPopup.show();  // Show the popup initially
+
+    // Create Open File button at the top-left corner
+    sf::RectangleShape openFileButton(sf::Vector2f(120.f, 40.f));
+    openFileButton.setFillColor(sf::Color::Blue);
+    openFileButton.setPosition(10.f, 10.f);
+
+    sf::Text openFileButtonText;
+    openFileButtonText.setFont(font);
+    openFileButtonText.setString("Open File");
+    openFileButtonText.setCharacterSize(24);
+    openFileButtonText.setFillColor(sf::Color::White);
+    openFileButtonText.setPosition(15.f, 15.f);
 
     bool fileInputHandled = false;
 
     // Main event loop: keep the window open as long as it is not closed
     while (window.isOpen()) {
         sf::Event event;  // Create an event object to handle user inputs and system events
-        
+
         // Poll all events from the window
         while (window.pollEvent(event)) {
             // If the window is closed, close the window
@@ -158,11 +168,17 @@ int main() {
                 window.close();  // Close the window
             }
 
+            // Handle file input popup events
             if (fileInputPopup.isVisible()) {
-                // Handle the file input popup events
                 if (event.type == sf::Event::TextEntered) {
-                    fileInputPopup.handleInput(event);
+                    // Handle the input directly
+                    if (event.text.unicode == '\b' && !fileInputPopup.getFileName().empty()) {
+                        fileInputPopup.setFileNameInput(fileInputPopup.getFileName().substr(0, fileInputPopup.getFileName().size() - 1));
+                    } else if (event.text.unicode < 128 && event.text.unicode != '\b') {
+                        fileInputPopup.setFileNameInput(fileInputPopup.getFileName() + static_cast<char>(event.text.unicode));
+                    }
                 }
+
                 if (event.type == sf::Event::MouseButtonPressed) {
                     // Check if the user clicked a button in the popup
                     bool proceed = fileInputPopup.handleButtonClick(sf::Mouse::getPosition(window));
@@ -178,6 +194,12 @@ int main() {
                     }
                 }
             } else {
+                // Handle "Open File" button click event
+                if (event.type == sf::Event::MouseButtonPressed) {
+                    if (openFileButton.getGlobalBounds().contains(event.mouseButton.x, event.mouseButton.y)) {
+                        fileInputPopup.show();  // Show the file input popup
+                    }
+                }
                 // Handle other input events (like text input, key presses)
                 editor.handleInput(event);
             }
@@ -189,11 +211,15 @@ int main() {
         // Clear the window with a white background color
         window.clear(sf::Color::White);
 
+        // Render the "Open File" button
+        window.draw(openFileButton);
+        window.draw(openFileButtonText);
+
         // Render the file input popup if it's visible
         if (fileInputPopup.isVisible()) {
             fileInputPopup.render(window);
         } else {
-            // Render the text editor
+            // Ensure the text editor starts below the "Open File" button
             editor.render(window);
         }
 
