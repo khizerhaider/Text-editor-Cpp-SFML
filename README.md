@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/6d600a8a-db3d-470e-941a-2aa2013cc546)
+
 Text Editor (C++ & SFML)
 Overview
 
