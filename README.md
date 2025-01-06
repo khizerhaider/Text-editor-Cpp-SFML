@@ -60,7 +60,7 @@ Controls
     Save: Saves the current text into a .txt file.
     Load: Loads text from an existing .txt file.
 
-Project Structure
+## Project Structure
 
 The project structure is as follows:
 
@@ -76,6 +76,7 @@ The project structure is as follows:
 │   └── Roboto-Light.ttf      # Font used for text rendering
 ├── README.md                 # Project documentation
 └── Makefile                  # (Optional) Build script
+
 
 Main Classes
 
