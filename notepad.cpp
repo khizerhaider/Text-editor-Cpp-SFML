@@ -503,7 +503,6 @@ void TextEditor::handleInput(sf::Event& event) {
 
 
 
-
 void TextEditor::update() {
     // Check if 500 milliseconds have passed since the last update
     if (clock.getElapsedTime().asMilliseconds() >= 500) {
