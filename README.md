@@ -63,7 +63,7 @@ Once the project is compiled, you can run the text editor using the following co
 # Project Structure
 
 The project structure is as follows:
-
+	'''
 /TextEditor
 ├── src/
 │   ├── TextEditor.cpp        # Core logic for text editing
@@ -76,7 +76,7 @@ The project structure is as follows:
 │   └── Roboto-Light.ttf      # Font used for text rendering
 ├── README.md                 # Project documentation
 └── Makefile                  # (Optional) Build script
-
+	'''
 
 # Main Classes
 
