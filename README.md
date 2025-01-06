@@ -26,7 +26,9 @@ Installation
 
 Clone the project to your local machine using the following command:
 git clone [https://github.com/khizerhaider/Simple-Text-editor-C-SFML.git](https://github.com/khizerhaider/Simple-Text-editor-C-SFML.git)
+
 cd TextEditor
+
 Install SFML
 
 Windows:
