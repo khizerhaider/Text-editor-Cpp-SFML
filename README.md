@@ -1,4 +1,5 @@
 Text Editor (C++ & SFML)
+
 ![image](https://github.com/user-attachments/assets/6d600a8a-db3d-470e-941a-2aa2013cc546)
 
 ![image](https://github.com/user-attachments/assets/451084a9-0fa5-49d0-8eaa-0bc7c57eabe7)
