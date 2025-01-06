@@ -18,8 +18,8 @@ struct Command {
     void setCursorCommand(Operation Operation);
 };
 
-// LineNode struct to represent a line of text
-// Each line of text is stored as a linked list node. The struct holds the data for one line, 
+// LineNode class to represent a line of text
+// Each line of text is stored as a linked list node. The class holds the data for one line, 
 // along with pointers to the next and previous lines, facilitating navigation through the text.
 class LineNode {
     public:
@@ -83,13 +83,11 @@ public:
     void moveCursorDown();
     // method to move the cursor freely through left key press
     void moveCursorLeft();
-    
+    // method to move the cursor right through right key press
     void moveCursorRight();
-
-    void adjustViewport();
-    
+    // method to update line number
     void UpdateLineNumber(); 
-
+    // method to clear the undo stack before we load a new file to start from the begining, and put nothing in the undo stack.
     void clearstack();
 
 };
