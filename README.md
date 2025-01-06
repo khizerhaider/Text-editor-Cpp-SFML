@@ -1,6 +1,8 @@
+Text Editor (C++ & SFML)
 ![image](https://github.com/user-attachments/assets/6d600a8a-db3d-470e-941a-2aa2013cc546)
 
-Text Editor (C++ & SFML)
+![image](https://github.com/user-attachments/assets/451084a9-0fa5-49d0-8eaa-0bc7c57eabe7)
+
 Overview
 
 This project is a simple text editor built using C++ and SFML (Simple and Fast Multimedia Library). It allows users to type and edit text in a multi-line environment with support for basic features like cursor movement, undo functionality, and file I/O. The editor uses SFML to handle window events and rendering, making it a lightweight and easy-to-use editor for basic text manipulation.
@@ -159,21 +161,17 @@ Project Structure
 The project structure is as follows:
 
 /TextEditor
-│
 ├── src/
-│   ├── TextEditor.cpp        # Contains the main logic for the TextEditor class
-│   ├── LineNode.cpp          # Defines the LineNode class (manages lines of text)
-│   ├── main.cpp              # The entry point of the application
-│
+│   ├── TextEditor.cpp        # Core logic for text editing
+│   ├── LineNode.cpp          # Linked list representation of lines
+│   ├── main.cpp              # Application entry point
 ├── include/
 │   ├── TextEditor.h          # Header for TextEditor class
 │   ├── LineNode.h            # Header for LineNode class
-│
 ├── assets/
-│   └── Roboto-Light.ttf      # The font used for rendering text
-│
-├── README.md                 # Project documentation (this file)
-└── Makefile                  # Makefile for building the project (optional)
+│   └── Roboto-Light.ttf      # Font used for text rendering
+├── README.md                 # Project documentation
+└── Makefile                  # (Optional) Build script
 
 Main Classes
 
