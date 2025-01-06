@@ -1,7 +1,7 @@
-#include "notepad.h" // Include the header file for the notepad functionality
-#include<iostream>    // Include iostream for input and output
-#include <fstream>  // Include the header for file handling
-#include "cstringMethods.h"
+#include    "notepad.h" // Include the header file for the notepad functionality
+#include    <iostream>    // Include iostream for input and output
+#include    <fstream>  // Include the header for file handling
+#include    "cstringMethods.h" // Include a user defined class to handle array operations
 using namespace std; // Use the standard namespace for convenience
 
 // Global stack for undo operations to store the commands for undo functionality
