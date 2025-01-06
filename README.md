@@ -6,7 +6,7 @@
 
 # Overview
 
-This project is a simple text editor built using C++ and SFML (Simple and Fast Multimedia Library). It allows users to type and edit text in a multi-line environment with support for basic features like cursor movement, undo functionality, and file I/O. The editor uses SFML to handle window events and rendering, making it a lightweight and easy-to-use editor for basic text manipulation.
+This project is a simple text editor built using C++ and SFML (Simple and Fast Multimedia Library) the Data structure used in it is a Doubly Linked-List. It allows users to type and edit text in a multi-line environment with support for basic features like cursor movement, undo functionality, and file I/O. The editor uses SFML to handle window events and rendering, making it a lightweight and easy-to-use editor for basic text manipulation.
 ## Features
 
     Multi-line text editing: Manage text across multiple lines, with a dynamic list of lines represented using a linked list.
