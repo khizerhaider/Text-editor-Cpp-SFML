@@ -1,6 +1,6 @@
 #include "notepad.h"  // Include the header file for the TextEditor class
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp> // Include for graphical components (like rendering text, shapes, etc.)
+#include <SFML/Window.hpp>  // Include for handling window events and input
 #include <iostream>  // For std::cout, std::cin (optional debug)
 
 class FileInputPopup {
