@@ -1,6 +1,7 @@
 #ifndef CSTRINGMETHODS_H
 #define CSTRINGMETHODS_H
-#include <iostream> // For size_t
+#include <iostream> // For size_t 
+// saperate file for managing cstring methods locally
 
 void* customMemcpy(void* dest, const void* src, size_t length) {
     // Cast source and destination pointers to unsigned char*
