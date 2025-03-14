@@ -2,7 +2,7 @@
 #define CSTRINGMETHODS_H
 #include <iostream> // For size_t 
 // saperate file for managing cstring methods locally
-//
+//  a custom library for methods
 void* customMemcpy(void* dest, const void* src, size_t length) {
     // Cast source and destination pointers to unsigned char*
     unsigned char* d = static_cast<unsigned char*>(dest);
