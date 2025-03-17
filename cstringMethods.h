@@ -21,7 +21,7 @@ void* customMemcpy(void* dest, const void* src, size_t length) {
         }
     }
 
-    return dest; // Return destination pointer////////
+    return dest; // Return destination pointer////////////////
 }
 
 #endif
