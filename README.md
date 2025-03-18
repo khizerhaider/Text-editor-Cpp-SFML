@@ -37,12 +37,14 @@ Install SFML
 
 ## Linux (Ubuntu):
 	sudo apt-get install libsfml-dev
-#macOS (Homebrew):
+## Linux (Fedora):
+    sudo dnf install libsfml-dev
+## macOS (Homebrew):
 	brew install sfml
 ## Build the Project
 
 You can compile and run the project manually or use a build tool like Make. Here's an example using g++ (for Linux or macOS):
-g++ -o TextEditor main.cpp TextEditor.cpp LineNode.cpp -lsfml-graphics -lsfml-window -lsfml-system
+g++ -o TextEditor Main.cpp notepad.cpp -lsfml-graphics -lsfml-window -lsfml-system
 ./TextEditor
 
 # Usage
